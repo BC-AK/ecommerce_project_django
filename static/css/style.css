@@ -1,0 +1,145 @@
+body{
+    background-image: url('../images/fruits_bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container.mt-5{
+    color: white;
+}
+
+h1 {
+    color: #ff4500; /* Orange-red for visibility on background */
+}
+
+
+/* products list cards css */
+
+/* Make all cards equal height */
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix image height */
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Make card body stretch */
+.product-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Align button bottom */
+.product-card .btn {
+    margin-top: auto;
+}
+
+/* Product Detail Card */
+.product-detail-card{
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Product Image */
+.product-detail-img{
+    max-width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+/* Product Title */
+.product-title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Price */
+.product-price{
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.product-description{
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* Cart Total Section */
+
+.cart-total{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Table card */
+
+.card{
+border-radius:10px;
+}
+
+/*order success box css*/
+.order-success-box{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+max-width:500px;
+width:100%;
+}
+
+/*login box css*/
+
+.auth-container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:75vh;
+}
+
+.auth-box{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+width:100%;
+max-width:420px;
+}
+
+.auth-box h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+.auth-box .btn{
+width:100%;
+}
+
+
+/*hero image*/
+
+.hero-img{
+height:450px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.carousel-caption{
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}

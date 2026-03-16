@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html>
 
@@ -31,11 +35,11 @@
 
 <td>{{ item.product.name }}</td>
 
-<td>{{ item.product.price }}</td>
+<td>₹ {{ item.product.price|floatformat:2 }}</td>
 
 <td>{{ item.quantity }}</td>
 
-<td>{{ item.product.price|floatformat:2 }}</td>
+<td>₹ {{ item.total|floatformat:2 }}</td>
 
 <td>
 
@@ -53,7 +57,7 @@
 
 </table>
 
-<h3>Total Price : ₹ {{ total }}</h3>
+
 
 <a href="/orders/checkout/" class="btn btn-primary">Checkout</a>
 
@@ -62,3 +66,5 @@
 </body>
 
 </html>
+
+{% endblock %}

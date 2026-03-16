@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html>
 
@@ -22,6 +26,7 @@
 <th>Product</th>
 <th>Price</th>
 <th>Quantity</th>
+<th>Total</th>
 
 </tr>
 
@@ -32,15 +37,13 @@
 <td>{{ item.product.name }}</td>
 <td>{{ item.product.price }}</td>
 <td>{{ item.quantity }}</td>
+<td>₹ {{ item.total|floatformat:2 }}</td>
 
 </tr>
 
 {% endfor %}
 
 </table>
-
-<h3>Total Price : ₹ {{ total }}</h3>
-
 <a href="/orders/place-order/" class="btn btn-success">Place Order</a>
 
 </div>
@@ -48,3 +51,4 @@
 </body>
 
 </html>
+{% endblock %}

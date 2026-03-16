@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'orders',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,5 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGIN_URL = '/users/login/'

@@ -1,8 +1,10 @@
 from django.shortcuts import redirect,render
 from .models import Cart
 from products.models import Product
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def add_to_cart(request, product_id):
 
     product = Product.objects.get(id=product_id)
@@ -16,7 +18,7 @@ def add_to_cart(request, product_id):
     return redirect('cart')
 
 
-
+@login_required
 def cart_view(request):
 
     cart_items = Cart.objects.filter(user=request.user)
@@ -35,6 +37,7 @@ def cart_view(request):
 
 #Increase Quantity View
 
+@login_required
 def increase_quantity(request, cart_id):
 
     cart = Cart.objects.get(id=cart_id)
@@ -47,6 +50,7 @@ def increase_quantity(request, cart_id):
 
 #Decrease Quantity View
 
+@login_required
 def decrease_quantity(request, cart_id):
 
     cart = Cart.objects.get(id=cart_id)
@@ -59,6 +63,7 @@ def decrease_quantity(request, cart_id):
 
 #Remove Item from Cart
 
+@login_required
 def remove_item(request, cart_id):
 
     cart = Cart.objects.get(id=cart_id)
@@ -66,3 +71,6 @@ def remove_item(request, cart_id):
     cart.delete()
 
     return redirect('cart')
+
+
+

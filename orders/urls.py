@@ -1,12 +1,15 @@
 from django.urls import path
-from .views import checkout, place_order, order_success
+from . import views
+
 
 urlpatterns = [
 
-path('checkout/', checkout, name='checkout'),
+path('checkout/', views.checkout, name='checkout'),
 
-path('place-order/', place_order, name='place_order'),
+path('place-order/', views.place_order, name='place_order'),
 
-path('success/', order_success, name='order_success'),
+path('success/', views.order_success, name='order_success'),
+
+path('history/', views.order_history, name='order_history'),
 
 ]
